@@ -42,7 +42,9 @@ Mini-SOC-Dashboard/
 
 * Install Python 3.x on your system
 * Install the required dependencies
-     pip install -r requirements.txt      (in powershell or bash Terminal)
+
+      pip install -r requirements.txt
+
 * Tkinter usually comes with Python, but if it's missing run:
    # On Ubuntu/Debian
       sudo apt-get install python3-tk
