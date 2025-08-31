@@ -15,30 +15,73 @@ Built with Python Tkinter, It demonstrates basic log monitoring, reads encrypted
 
 
 ## Project Structure
-mini-soc-dashboard/
-│── analysis.py # Handles log analysis
-│── cryption.py # Handles encryption/decryption
-│── dashboard.py # Tkinter GUI dashboard
-│── users_details.txt # Stores user activity
-│── login_log_encrypt.txt # Encrypted log file
-│── requirements.txt # Project dependencies
+
+Mini-SOC-Dashboard/
+│── encrypt_key_log_file.py   # Generates data + encryption
+│── dashboard.py              # Main SOC Dashboard (Tkinter UI)
+│── cryption.py               # Encryption & decryption functions
+│── analysis.py               # Log analysis functions
+│── secret.key                # Encryption key (auto-generated)
+│── login_log_encrypt.txt     # Encrypted logs
+│── login_log.txt             # Plain logs
+│── users_details.txt         # User details
+│── requirements.txt          # Dependencies
 
 
-## Installation
-1. Clone this repo:
-   ```bash
-   git clone https://github.com/yourusername/mini-soc-dashboard.git
-   
-2. Install dependencies:
-    pip install -r requirements.txt
 
-3. Run the dashboard:
-   python dashboard.py
+
+
+## How to Run the Mini SOC Dashboard
+
+### Clone this repo
+   ``bash
+      git clone https://github.com/Mercy712/mini-soc-dashboard.git
+      cd mini-soc-dashboard
+
+# prerequisites:
+
+* Install Python 3.x on your system
+* Install the required dependencies
+     pip install -r requirements.txt      (in powershell or bash Terminal)
+* Tkinter usually comes with Python, but if it's missing run:
+   # On Ubuntu/Debian
+      sudo apt-get install python3-tk
+   # On Windows  (Tkinter comes pre-installed with Python)
+
+
+## STEP 1: Generate Data
+Run the encrypt_key_log_file.py script. This will:
+
+- Request user’s details (username, password, etc.)
+
+- Generate secret.key (your encryption key)
+
+- Encrypt login details
+
+- Create the following files automatically:
+
+   * login_log_encrypt.txt → encrypted login attempts
+
+   * login_log.txt → plain text login log (for debugging/personal reference)
+
+   * users_details.txt → stores registered user details in plain text
+ 
+
+
+## STEP 2: Launch the Dashboard
+Run the dashboard.py script. This will:
+
+- Display decrypted login logs in the dashboard UI
+
+- Show a summary of login attempts (success vs failed logins)
+
+- Allow you to export a report (soc_report.csv) by clicking the Export CSV button
+
+- Let you refresh logs with the Refresh button
+
 
 
 Future Improvements
-
-Generate styled PDF report with tables & headers.
 
 Add real-time log monitoring.
 
