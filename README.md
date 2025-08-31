@@ -34,7 +34,7 @@ Mini-SOC-Dashboard/
 ## How to Run the Mini SOC Dashboard
 
 ### Clone this repo
-   ``bash
+   ```bash
       git clone https://github.com/Mercy712/mini-soc-dashboard.git
       cd mini-soc-dashboard
 
